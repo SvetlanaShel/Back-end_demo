@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Back-end.iml" filepath="$PROJECT_DIR$/.idea/Back-end.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson01/demo20250415_01/demo20250415_01.iml" filepath="$PROJECT_DIR$/lesson01/demo20250415_01/demo20250415_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson02/demo20250416_02/demo20250416_02.iml" filepath="$PROJECT_DIR$/lesson02/demo20250416_02/demo20250416_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson02/demo20250416_03/demo20250416_03.iml" filepath="$PROJECT_DIR$/lesson02/demo20250416_03/demo20250416_03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson03/demo20250417_01/demo20250417_01.iml" filepath="$PROJECT_DIR$/lesson03/demo20250417_01/demo20250417_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson03/demo20250417_02/demo20250417_02.iml" filepath="$PROJECT_DIR$/lesson03/demo20250417_02/demo20250417_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework/homework.iml" filepath="$PROJECT_DIR$/homework/homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework/homework20250417/homework20250417.iml" filepath="$PROJECT_DIR$/homework/homework20250417/homework20250417.iml" />
+    </modules>
+  </component>
+</project>
