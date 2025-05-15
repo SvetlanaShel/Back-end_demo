@@ -10,8 +10,8 @@ import java.util.Set;
 
 @NoArgsConstructor
 @Getter
+@Setter
 public class Programmer {
-    @Setter
     private Long id;
     private String name;
     private Set<Task> tasks;
