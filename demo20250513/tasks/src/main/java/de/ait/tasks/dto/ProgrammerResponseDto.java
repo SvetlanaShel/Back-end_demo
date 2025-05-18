@@ -1,16 +1,13 @@
 package de.ait.tasks.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import java.util.Set;
+import lombok.Setter;
 
 @NoArgsConstructor
-@AllArgsConstructor
+@Setter
 @Getter
 public class ProgrammerResponseDto {
     private Long id;
     private String name;
-    private Set<TaskResponseDto> tasks;
 }

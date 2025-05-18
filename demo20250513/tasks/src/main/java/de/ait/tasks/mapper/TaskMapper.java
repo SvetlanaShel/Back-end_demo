@@ -1,4 +1,4 @@
-package de.ait.tasks.mappers;
+package de.ait.tasks.mapper;
 
 import de.ait.tasks.dto.TaskRequestDto;
 import de.ait.tasks.dto.TaskResponseDto;
@@ -9,7 +9,7 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface TaskMapper {
-    TaskResponseDto toResponseDto(Task task);
-    List<TaskResponseDto> toResponseDtoList(List<Task> task);
-    Task fromRequestDto(TaskRequestDto dto);
+    TaskResponseDto toDto(Task task);
+    List<TaskResponseDto> toDtoList(List<Task> task);
+    Task fromDto(TaskRequestDto dto);
 }
