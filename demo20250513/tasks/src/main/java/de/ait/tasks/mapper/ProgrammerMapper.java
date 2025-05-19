@@ -1,4 +1,4 @@
-package de.ait.tasks.mappers;
+package de.ait.tasks.mapper;
 
 
 import de.ait.tasks.dto.ProgrammerRequestDto;
@@ -10,8 +10,7 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface ProgrammerMapper {
-    ProgrammerResponseDto toResponceDto(Programmer programmer);
-    List<ProgrammerResponseDto> toResponceDtoList(List<Programmer> programmer);
-    Programmer fromRequestDto(ProgrammerRequestDto dto);
-
+    ProgrammerResponseDto toDto(Programmer programmer);
+    List<ProgrammerResponseDto> toDtoList(List<Programmer> programmer);
+    Programmer fromDto(ProgrammerRequestDto dto);
 }

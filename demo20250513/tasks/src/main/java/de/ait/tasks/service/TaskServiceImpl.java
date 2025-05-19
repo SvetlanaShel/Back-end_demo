@@ -2,11 +2,12 @@ package de.ait.tasks.service;
 
 import de.ait.tasks.dto.TaskRequestDto;
 import de.ait.tasks.dto.TaskResponseDto;
-import de.ait.tasks.mappers.TaskMapper;
+import de.ait.tasks.mapper.TaskMapper;
+import de.ait.tasks.model.Programmer;
 import de.ait.tasks.model.Task;
+import de.ait.tasks.repository.ProgrammerRepository;
 import de.ait.tasks.repository.TaskRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,30 +17,28 @@ import java.util.List;
 public class TaskServiceImpl implements TaskService {
     private final TaskRepository repository;
     private final TaskMapper mapper;
+    private final ProgrammerRepository programmerRepository;
 
 
 
     @Override
-    // return или значение TaskResponseDto или null
-    public List<TaskResponseDto> getAllTasks() {
-        return mapper.toResponseDtoList(repository.findAll());
+    public List<TaskResponseDto> getTasks() {
+        return mapper.toDtoList(repository.findAll());
     }
 
     @Override
     public TaskResponseDto getTaskById(Long id) {
-        return mapper.toResponseDto(repository.findById(id));
+
+        return mapper.toDto(repository.findById(id).orElse(null));
     }
 
     @Override
-    public TaskResponseDto createTask(TaskRequestDto taskDto) {
-        Task task = mapper.fromRequestDto(taskDto);
-        Task savedTask = repository.save(task);
-        return mapper.toResponseDto(savedTask);
-    }
-
-    @Override
-    public TaskResponseDto deleteTask(Long id) {
-        return mapper.toResponseDto(repository.delete(id));
+    public TaskResponseDto createTask(TaskRequestDto dto) {
+        Task task = mapper.fromDto(dto);
+        Programmer programmer = programmerRepository.findById(dto.getProgrammerId()).orElseThrow(() -> new RuntimeException("Programmer not found"));
+        task.setProgrammer(programmer);
+        Task saved = repository.save(task);
+        return mapper.toDto(saved);
     }
 
 }

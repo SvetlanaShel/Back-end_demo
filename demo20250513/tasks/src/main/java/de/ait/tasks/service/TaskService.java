@@ -6,8 +6,7 @@ import de.ait.tasks.dto.TaskResponseDto;
 import java.util.List;
 
 public interface TaskService {
-    List<TaskResponseDto> getAllTasks();
+    List<TaskResponseDto> getTasks();
     TaskResponseDto getTaskById(Long id);
-    TaskResponseDto createTask(TaskRequestDto taskRequestDto);
-    TaskResponseDto deleteTask(Long id);
+    TaskResponseDto createTask(TaskRequestDto dto);
 }
